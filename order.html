@@ -22,9 +22,58 @@
             <button id="contact-button" class="header-buttons">Наши контакты</button>
         </div>
 
+        <main>
+            <div class="order-page">
+                <h3>    Оформить заказ  </h3>
+
+                <table class="order-table">
+                    <tr>
+                        <th> <label for="order-vertical-size">Высота:  </label> </th>
+                        <td> 
+                            <input type="text" id="order-vertical-size" class="input-size">
+                            <label for="order-vertical-size"> ,мм. </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>  <label for="order-horizontal-size">Ширина: </label> </th>
+                        <td>
+                            <input type="text" id="order-horizontal-size" class="input-size">
+                            <label for="order-horizontal-size"> ,мм. </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="order-glass-thickness"> Толщина стекла: </label> </th>
+                        <td>
+                            <input type="text" id="order-glass-thickness" class="input-size">
+                            <label for="order-glass-thickness"> ,мм. </label>
+                        </td>
+                    </tr>
+                </table>
+
+                <p><b>Выберите материал витража</b></p>
+                <p><input name="glass-type" type="radio" value="glass"> Стекло</p>
+                <p><input name="glass-type" type="radio" value="orgglass"> Оргстекло</p>
+
+                <div class="selectors">
+                    <label for="delivery-method">Способ доставки </label>
+                    <br>
+                    <select id="delivery-method">
+                        <option value="0">Самовызов в мастерскую</option>
+                        <option value="1">Отправка курьером</option>
+                        <option value="2">Доставка нашей мастерской</option>
+                    </select>
+
+                </div>
+                <button id="load-order-image">  Загрузить изображение </button>
+                <p><button id="checkout">  Оформить заказ </button></p>
+
+
+            </div>
+        </main>
 
         <noscript>  Для полноценной работы сайта необходима поддержка JavaScript! </noscript>
         <script src="action.js"></script>
+        <script src="orderhandler.js"></script>
 
         <footer>
             <p>
