@@ -4,16 +4,6 @@ body{
     background-position: fixed;
 }
 
-.lang-button{
-    outline: none;
-    border: 0;
-    background: transparent;
-}
-
-.lang-button-container{
-    text-align: right;
-}
-
 @font-face {
     font-family: Gothic;
     src: url(resources/Mellizan.otf);
@@ -145,34 +135,68 @@ footer{
 
 /*  Настройка стиля для страницы с примерами работы */
 
-.image-container {
-    margin: 5%;
+.image-flipping{
+    position: relative;
+    max-width: 50%;
+    margin: 50px auto;
 }
 
-.previous-button, .next-button {
-    cursor: pointer;
+.image-flipping input[name="switch"] {
+    display: none;
+}
+
+.switch {
     position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color:rgb(72, 168, 197);
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.5s ease;
-    border-radius: 0 3px 3px 0;
-    border: 0;
-    border-radius: 5px 5px 5px 5px;
+    left: 0;
+    bottom: -40px;
+    text-align: center;
+    width: 100%;
 }
 
-.next-button {
-    right: 5%;
+.switch label {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    cursor: pointer;
+    margin: 0 3px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, .8);
+    border-radius: 50%;
+    border: 5px solid #2f363c;
+    background-color: #738290;
 }
 
-.previous-button {
-    left: 5%;
+#flip1:checked~.switch label[for="flip1"] {
+    background-color: rgb(30, 204, 181);
+}
+#flip2:checked~.switch label[for="flip2"] {
+    background-color: rgb(30, 204, 181);
+}
+#flip3:checked~.switch label[for="flip3"] {
+    background-color: rgb(30, 204, 181);
 }
 
-  .previous-button:hover, .next-button:hover {
-    background-color: rgba(15, 51, 59, 0.8);
-  }
+.image-flipping-inner{
+    overflow: hidden;
+}
+
+.images-gallery{
+    display: flex;
+    width: 100%;
+    transition: all 0.5s;
+}
+.images-gallery img{
+    width: 100%;
+    flex-shrink:0;
+}
+
+#flip1:checked~image-flipping-inner images-gallery {
+    transform: translate(0);
+} 
+#flip2:checked~.image-flipping-inner .images-gallery {
+    transform: translateX(-100%);
+}
+#flip3:checked~.image-flipping-inner .images-gallery {
+    transform: translateX(-200%);
+}
+  
+

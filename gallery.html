@@ -8,10 +8,6 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="lang-button-container">
-            <button class="lang-button" id="rus-icon"> <img src="resources/rus_icon.png" alt="RUS" width="35"></button>
-            <button class="lang-button" id="eng-icon"> <img src="resources/eng_icon.png" alt="ENG" width="35">></button>
-        </div>
 
         <h1>Site of the workshop "Rosetta of Saint-Denis"</h1>
 
@@ -23,15 +19,28 @@
             <button id="contact-button" class="header-buttons">Наши контакты</button>
         </div>
 
-        <div class="image-container">
-            <div class="workshop-example">
-                <img src="resources/imageForGallery/pause-overlay.png" style="width:100%" id="firstImage">
+        <div class="image-flipping">
+            <input type="radio" name="flip" id="flip1" checked>
+            <input type="radio" name="flip" id="flip2">
+            <input type="radio" name="flip" id="flip3">
+
+            
+            <div class="switch">
+                <label for="flip1"></label>
+                <label for="flip2"></label>
+                <label for="flip3"></label>
             </div>
 
+            <div class="image-flipping-inner">
+                <div class="images-gallery">
+                    <img src="resources/imageForGallery/miah_stainedglass.png">
+                    <img src="resources/imageForGallery/pause-overlay.png">
+                    <img src="resources/imageForGallery/rakka.png">
+                </div>
+            </div>
 
-            <button class="previous-button">&#11164;</button>
-            <button class="next-button">&#11166;</button>
         </div>
+
 
         <noscript>  Для полноценной работы сайта необходима поддержка JavaScript! </noscript>
         <script src="action.js"></script>
