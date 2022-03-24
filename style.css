@@ -189,7 +189,7 @@ footer{
     flex-shrink:0;
 }
 
-#flip1:checked~image-flipping-inner images-gallery {
+#flip1:checked~.image-flipping-inner .images-gallery {
     transform: translate(0);
 } 
 #flip2:checked~.image-flipping-inner .images-gallery {
